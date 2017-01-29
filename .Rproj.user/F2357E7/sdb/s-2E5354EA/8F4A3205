@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1485626267354.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8F4A3205",
+    "lastKnownWriteTime" : 8457606642722434671,
+    "last_content_update" : 1485626267354,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "F688B7C5",
+        "caption" : "Rnd_Overall_Outcome_Summary",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Rnd_Overall_Outcome_Summary&cache_key=F688B7C5",
+        "displayedObservations" : 3,
+        "environment" : "",
+        "object" : "Rnd_Overall_Outcome_Summary",
+        "preview" : 0,
+        "totalObservations" : 3,
+        "variables" : 7
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\nlibrary(shinydashboard)\n\nshinyUI(dashboardPage(\n  dashboardHeader(title = \"NFL Draft Analysis\"),\n  dashboardSidebar(\n    sidebarUserPanel(\"Marc Fridson\"),\n    sidebarMenu(\n    menuItem(\"NFL Team Draft Success\", tabName = \"nfl_team\", icon = icon(\"dashboard\")),\n    menuItem(\"Pro Bowls by Round/Position\", tabName = \"probowl_rnd\", icon = icon(\"th\")),\n    menuItem(\"Years in the NFL by Age\", tabName = \"age_years\", icon = icon(\"th\")),\n    menuItem(\"NFL Success by School\", tabName = \"coll_success\", icon = icon(\"th\"))\n  )),\n  dashboardBody(\n    # Boxes need to be put in a row (or column)\n    fluidPage(\n      fluidRow(plotOutput(\"team_plot\")),\n      fillRow(box(tableOutput(\"Rnd_Summary\"),checkboxGroupInput(\"check_pos\", NULL, c(\"QB\",\"RB\",\"FB\",\"WR\",\"TE\",\"T\",\"G\",\"C\",\"DE\",\"DT\",\"LB\",\"DB\",\"K\",\"P\"),selected = c(\"QB\",\"RB\",\"FB\",\"WR\",\"TE\",\"T\",\"G\",\"C\",\"DE\",\"DT\",\"LB\",\"DB\",\"K\",\"P\"),inline = TRUE))\n    )\n    )\n  )\n)\n)  \n",
+    "created" : 1485141603832.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3644630533",
+    "id" : "FB0A8390",
+    "lastKnownWriteTime" : 1485659551,
+    "last_content_update" : 1485659551815,
+    "path" : "~/Dropbox (Instant Analytics)/NYC Data Science/Projects/#1- Data Visualization and Exploration/ShinyProject/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

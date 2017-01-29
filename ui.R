@@ -6,25 +6,25 @@
 #
 
 library(shiny)
+library(shinydashboard)
 
-shinyUI(fluidPage(
-
-  # Application title
-  titlePanel("Old Faithful Geyser Data"),
-
-  # Sidebar with a slider input for number of bins
-  sidebarLayout(
-    sidebarPanel(
-      sliderInput("bins",
-                  "Number of bins:",
-                  min = 1,
-                  max = 50,
-                  value = 30)
-    ),
-
-    # Show a plot of the generated distribution
-    mainPanel(
-      plotOutput("distPlot")
+shinyUI(dashboardPage(
+  dashboardHeader(title = "NFL Draft Analysis"),
+  dashboardSidebar(
+    sidebarUserPanel("Marc Fridson"),
+    sidebarMenu(
+    menuItem("NFL Team Draft Success", tabName = "nfl_team", icon = icon("dashboard")),
+    menuItem("Pro Bowls by Round/Position", tabName = "probowl_rnd", icon = icon("th")),
+    menuItem("Years in the NFL by Age", tabName = "age_years", icon = icon("th")),
+    menuItem("NFL Success by School", tabName = "coll_success", icon = icon("th"))
+  )),
+  dashboardBody(
+    # Boxes need to be put in a row (or column)
+    fluidPage(
+      fluidRow(plotOutput("team_plot")),
+      fillRow(box(tableOutput("Rnd_Summary"),checkboxGroupInput("check_pos", NULL, c("QB","RB","FB","WR","TE","T","G","C","DE","DT","LB","DB","K","P"),selected = c("QB","RB","FB","WR","TE","T","G","C","DE","DT","LB","DB","K","P"),inline = TRUE))
+    )
     )
   )
-))
+)
+)  
