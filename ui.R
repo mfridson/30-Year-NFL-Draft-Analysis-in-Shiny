@@ -9,7 +9,9 @@ library(shiny)
 library(shinydashboard)
 library(dplyr)
 
+#Specifies Shiny Dashboard user-interface
 shinyUI(dashboardPage(skin = "green",
+                      #Creates left-hand side menu to navigate the 9 different interactive Visualizations
                       dashboardHeader(title = "NFL Draft Analysis"),
                       dashboardSidebar(
                         sidebarUserPanel("Marc Fridson"),
@@ -24,6 +26,7 @@ shinyUI(dashboardPage(skin = "green",
                           menuItem("CFB Kicker to NFL Success", tabName = "k_coll", icon = icon("star")),
                           menuItem("CFB Punter to NFL Success", tabName = "p_coll", icon = icon("star"))
                         )),
+                      #Defines the visual layout for each visualization and its associated inputs when it's tab is initiated
                       dashboardBody(
                         tabItems(
                           tabItem(tabName="nfl_team",fluidPage(
